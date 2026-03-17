@@ -26,6 +26,6 @@
 }
 
 .nav-list a.active-link {
-    text-decoration: underline; !important;
-    text-underline-offset: 4px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }

@@ -1,0 +1,30 @@
+.collapse {
+  border-radius: 8px;
+  margin: 40px 280px;
+  overflow: hidden;
+  gap: 30px;
+}
+
+.collapse-header {
+  background-color: #fc5e5e;
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.collapse-header h3 {
+  font-size: 16px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.collapse-content {
+  padding: 10px 15px;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
