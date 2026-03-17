@@ -1,0 +1,22 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 600px);
+  gap: 65px;
+  margin: 60px 130px;
+  padding: 85px;
+
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  
+  justify-content: space-between;
+  align-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

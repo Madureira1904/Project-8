@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+import Banner from "../components/Banner/Banner.jsx";
+import Card from "../components/Card/Card.jsx";
+import ImgBanner from "../imgs/4706e7dde270fc8fc902a1eb738458e7b29c1899.jpg"
 
 function Home() {
-  const [properties, setProperties] = useState([]); // keep the data
+  const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8081/api/properties") // fetch to search the data logements
+    fetch("http://localhost:8080/api/properties")
       .then(res => res.json())
       .then(data => {
         setProperties(data);
@@ -18,12 +21,15 @@ function Home() {
 
   return (
     <div>
-      {properties.map(property => (
-        <div key={property.id}>
-          <h2>{property.title}</h2>
-          <img src={property.cover} alt={property.title} width={300} />
-        </div>
-      ))}
+      <Banner
+        image={ImgBanner}
+        title="Chez vous, partout et ailleurs"
+      />
+      <div className="cards-container">
+        {properties.map(property => (
+          <Card key={property.id} property={property} />
+        ))}
+      </div>
     </div>
   );
 }
