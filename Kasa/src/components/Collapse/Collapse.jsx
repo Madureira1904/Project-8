@@ -9,13 +9,21 @@ function Collapse({ title, children }) {
   };
 
   return (
-
     <div className="collapse">
-          <div className="collapse-header" onClick={toggleCollapse}>
-            <h3>{title}</h3>
-            <span>{isOpen ? "▲" : "▼"}</span>
-          </div>
-          {isOpen && <div className="collapse-content">{children}</div>}
+      <div className="collapse-header" onClick={toggleCollapse}>
+        <h3>{title}</h3>
+
+        <span className="collapse-icon">
+          {isOpen ? (
+            <i className="fa-solid fa-chevron-down fa-rotate-180"></i>
+          ) : (
+            <i className="fa-solid fa-chevron-down"></i>
+          )}
+        </span>
+
+      </div>
+
+      {isOpen && <div className="collapse-content">{children}</div>}
     </div>
   );
 }
