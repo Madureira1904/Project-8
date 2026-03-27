@@ -1,0 +1,40 @@
+.logement-container {
+  margin-top: 50px;
+  margin: 65px 130px;
+}
+
+.logement-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+logement-host-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.logement-collapses {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    gap: 150px;
+    margin-top: 35px;
+}
+
+
+.collapse-description {
+    margin: 0 0;
+    padding: 0 0;
+    width: 50%;
+    height: 100%;
+}
+
+.collapse-equipements {
+    margin: 0 0;
+    padding: 0 0;
+    width: 50%;
+    height: 100%;
+}

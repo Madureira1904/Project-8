@@ -4,8 +4,11 @@ import "./Card.css";
 function Card({ property }) {
   return (
     <Link to={`/logement/${property.id}`} className="card">
-      <img src={property.cover} alt={property.title} />
-      <h2>{property.title}</h2>
+      <div className="card-img-wrapper">
+        <img src={property.cover} alt={property.title} className="card-img" />
+        <div className="card-overlay"></div>
+        <h2 className="card-title">{property.title}</h2>
+      </div>
     </Link>
   );
 }

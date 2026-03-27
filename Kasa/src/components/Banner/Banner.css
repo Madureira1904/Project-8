@@ -5,6 +5,7 @@
     position: relative;
     margin: 0px 130px;
     margin-top: 60px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .banner img {
@@ -31,4 +32,8 @@
     font-size: 70px;
     text-align: center;
     z-index: 3;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 2px black;
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }

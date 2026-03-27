@@ -1,0 +1,21 @@
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 50px;
+  margin-top: 10px;
+}
+
+.host p {
+  text-align: right;
+  max-width: 100px;
+  font-size: 20px;
+  color: #fc5e5e;;
+}
+
+.host-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
