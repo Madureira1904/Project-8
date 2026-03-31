@@ -24,7 +24,6 @@ logement-host-rating {
     margin-top: 35px;
 }
 
-
 .collapse-description {
     margin: 0 0;
     padding: 0 0;
@@ -37,4 +36,66 @@ logement-host-rating {
     padding: 0 0;
     width: 50%;
     height: 100%;
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+
+  .carousel {
+    height: 350px;
+  }
+
+  .logement-container {
+    margin: 20px;
+  }
+
+  .logement-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logement-host-rating {
+    display: flex;       
+    align-items: center;    
+    justify-content: space-between; 
+    gap: 50px;
+    margin-top: 10px;
+    flex-direction: row-reverse;
+  }
+
+  .logement-collapses {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .collapse-description,
+  .collapse-equipements {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logement-host-rating img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .logement-host-rating span {
+    font-size: 20px;
+  }
+
+  .logement-rating i {
+    font-size: 20px;
+  }
+
+  .logement-title {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+
+
 }

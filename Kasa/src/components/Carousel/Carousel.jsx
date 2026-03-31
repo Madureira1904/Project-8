@@ -29,12 +29,12 @@ function Carousel({ images }) {
 
       {totalImages > 1 && (
         <>
-          <button className="carousel-prev" onClick={prevImage}>
+          <div className="carousel-prev" onClick={prevImage}>
             <i className="fa-solid fa-chevron-left"></i>
-          </button>
-          <button className="carousel-next" onClick={nextImage}>
+          </div>
+          <div className="carousel-next" onClick={nextImage}>
             <i className="fa-solid fa-chevron-right"></i>
-          </button>
+          </div>
           <div className="carousel-counter">
             {currentIndex + 1}/{totalImages}
           </div>

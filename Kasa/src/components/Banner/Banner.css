@@ -37,3 +37,26 @@
 
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
+
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+  .banner {
+    height: 110px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .banner h1 {
+    max-width: 220px;
+    line-height: 1.0;
+    font-size: 25px;
+    left: 20px;
+    top: 35%;
+    transform: translateY(-50%);
+    text-align: left;
+    -webkit-text-stroke: 0;
+  }
+}

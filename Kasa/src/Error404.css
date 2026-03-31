@@ -1,0 +1,25 @@
+.Page404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -60px;
+}
+
+.Page404 h1 {
+  font-size: 250px;
+  color: #fc5e5e;
+}
+
+.Page404 p {
+  font-size: 35px;
+  color: #fc5e5e;
+  margin-top: -50px;
+}
+
+.Page404 .error-link {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 100px;
+}

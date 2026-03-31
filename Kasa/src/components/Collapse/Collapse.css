@@ -1,7 +1,6 @@
 .collapse {
   border-radius: 8px;
   margin: 40px 280px;
-  overflow: hidden;
   gap: 30px;
 }
 
@@ -13,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  border-radius: 8px;
 }
 
 .collapse-header h3 {
@@ -22,13 +22,43 @@
 }
 
 .collapse-content {
+  min-height: 0;
   padding: 10px 15px;
   background-color: #fff;
   font-size: 18px;
-  line-height: 1.5;
 }
 
 .collapse-icon i {
   color: #f9f9f9;
   font-size: 30px;
+}
+
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+  .collapse {
+    margin: 20px;
+    gap: 15px;
+  }
+
+  /* Header do collapse */
+  .collapse-header {
+    height: 40px;
+    padding: 8px 12px;
+  }
+
+  .collapse-header h3 {
+    font-size: 16px;
+  }
+
+  .collapse-content {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+  }
+
+  .collapse-icon i {
+    font-size: 18px;
+  }
 }

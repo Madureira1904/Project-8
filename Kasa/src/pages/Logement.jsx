@@ -8,27 +8,41 @@ import Tags from "../components/Tags/Tags.jsx";
 import Host from "../components/Host/Host.jsx";
 import Rating from "../components/Rating/Rating.jsx";
 import "../Logement.css";
+import { Navigate } from "react-router-dom";
 
 function Logement() {
   const { idlogement } = useParams();
   const [logement, setLogement] = useState(null);
 
-  // Fetch do logement pelo ID
+  {/* Fetch do logement pelo ID, neste caso idLogement*/}
   useEffect(() => {
-    fetch(`http://localhost:8080/api/properties/${idlogement}`)
-      .then((res) => res.json())
-      .then((data) => setLogement(data))
-      .catch((err) => console.error(err));
-  }, [idlogement]);
+  fetch(`http://localhost:8080/api/properties/${idlogement}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Logement not found");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setLogement(data);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLogement(false);
+    });
+}, [idlogement]);
 
-  if (!logement) return <p>Chargement...</p>;
+    if (logement === false) return <Navigate to="/error" />;
+
+    if (logement === null) return  <p> en chargement.. </p>
+
 
   return (
     <div className="logement-container">
       {/* Carousel */}
       <Carousel images={logement.pictures} />
 
-       {/* info */}
+       {/* info da page */}
       <div className="logement-header">
         <div className="logement-text">
           <Title title={logement.title} />
@@ -41,7 +55,7 @@ function Logement() {
         </div>
       </div>
 
-      {/* Collapse Description */}
+      {/* Collapse */}
       <div className="logement-collapses">
         <Collapse title="Description" className="collapse-description">
             <p>{logement.description}</p>

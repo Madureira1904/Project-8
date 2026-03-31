@@ -21,11 +21,37 @@
 .nav-list a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
     font-size: 40px;
 }
 
 .nav-list a.active-link {
     text-decoration: underline;
     text-underline-offset: 8px;
+}
+
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+  .header {
+    margin: 20px;
+  }
+
+  .logo {
+    height: 50px;
+    margin-top: 0;
+  }
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .nav-list a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .nav-list a.active-link {
+    text-underline-offset: 3px;
+  }
 }
