@@ -21,18 +21,26 @@
   font-size: 28px;
 }
 
-.collapse-content {
-  min-height: 0;
-  padding: 10px 15px;
-  background-color: #fff;
-  font-size: 18px;
-}
-
 .collapse-icon i {
   color: #f9f9f9;
   font-size: 30px;
 }
 
+
+.collapse-content {
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+  padding-top: 10px;
+}
+
+.collapse-content.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 /* VERSION MOBILE */
 
