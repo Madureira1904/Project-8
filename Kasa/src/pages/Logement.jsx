@@ -10,12 +10,14 @@ import Rating from "../components/Rating/Rating.jsx";
 import "../Logement.css";
 import { Navigate } from "react-router-dom";
 
+// Componente principal da página de detalhe de um alojamento (logement)
 function Logement() {
-  const { idlogement } = useParams();
-  const [logement, setLogement] = useState(null);
+  const { idlogement } = useParams();  // Extrai o parâmetro "idlogement" da URL (React Router)
+  const [logement, setLogement] = useState(null); // Estado que guarda os dados do logement
 
-  {/* Fetch do logement pelo ID, neste caso idLogement*/}
+  // Fetch do logement pelo ID, neste caso idLogement
   useEffect(() => {
+    // Faz pedido à API para obter o logement específico pelo ID
   fetch(`http://localhost:8080/api/properties/${idlogement}`)
     .then((res) => {
       if (!res.ok) {
@@ -23,20 +25,21 @@ function Logement() {
       }
       return res.json();
     })
-    .then((data) => {
+    .then((data) => { // Guarda os dados recebidos no estado
       setLogement(data);
     })
-    .catch((err) => {
+    .catch((err) => { // Caso ocorra erro, define o estado como falso
       console.error(err);
       setLogement(false);
     });
 }, [idlogement]);
 
-    if (logement === false) return <Navigate to="/error" />;
+    if (logement === false) return <Navigate to="/error" />;  // Se o logement não existir ou deu erro, redireciona para página de erro
 
     if (logement === null) return  <p> en chargement.. </p>
 
 
+// Renderização principal da página
   return (
     <div className="logement-container">
       {/* Carousel */}

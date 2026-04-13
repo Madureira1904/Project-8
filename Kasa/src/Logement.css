@@ -13,7 +13,6 @@ logement-host-rating {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 10px;
 }
 
 .logement-collapses {
@@ -22,6 +21,7 @@ logement-host-rating {
     width: 100%;
     gap: 150px;
     margin-top: 35px;
+    list-style: none;
 }
 
 .collapse-description {
@@ -36,6 +36,13 @@ logement-host-rating {
     padding: 0 0;
     width: 50%;
     height: 100%;
+    list-style: none;
+}
+
+.collapse-equipements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* VERSION MOBILE */
@@ -97,5 +104,8 @@ logement-host-rating {
     padding-bottom: 15px;
   }
 
+  .host p {
+    font-size: 15px;
+}
 
 }

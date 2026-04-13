@@ -8,7 +8,7 @@ function Rating({ rating }) {
           key={i}
           className={i < Number(rating) ? "star filled" : "star"}
         >
-          ★
+          <i class="fa-solid fa-star"></i>
         </span>
       ))}
     </div>

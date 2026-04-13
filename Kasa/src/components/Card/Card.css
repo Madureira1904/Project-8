@@ -19,7 +19,7 @@
     font-size: 16px;
     margin: 0;
     font-size: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .card:hover {
@@ -43,6 +43,9 @@
 @media (max-width: 768px) {
 
   .card h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
+
+  .card {
+    height: 300px;
 }

@@ -1,7 +1,6 @@
 .collapse {
   border-radius: 8px;
   margin: 40px 280px;
-  gap: 30px;
 }
 
 .collapse-header {
@@ -11,12 +10,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   border-radius: 8px;
+  width: 100%;
+  font-weight: normal;
+  height: 70px;
 }
 
 .collapse-header h3 {
-  font-size: 16px;
   color: #fff;
   font-size: 28px;
 }
@@ -26,20 +26,27 @@
   font-size: 30px;
 }
 
-
 .collapse-content {
-  font-size: 18px;
+  max-height: 0px;
+  border-radius: 8px;
   opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.4s ease;
+  font-weight: normal;
+  font-size: 24px;
+  overflow: hidden;
   pointer-events: none;
+  background-color: #f3f2f2;
   padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
 .collapse-content.open {
   opacity: 1;
-  transform: translateY(0);
+  display: block;
   pointer-events: auto;
+  max-height: 500px;
 }
 
 /* VERSION MOBILE */

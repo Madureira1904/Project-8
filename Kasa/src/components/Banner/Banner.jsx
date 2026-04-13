@@ -1,5 +1,6 @@
 import "./Banner.css"
 
+// Componente Banner responsável por mostrar uma imagem de destaque com título
 function Banner({ image, title }) {
   return (
     <div className="banner">
